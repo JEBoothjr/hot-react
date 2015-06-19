@@ -1,0 +1,27 @@
+{{#contentFor 'css'}}
+ <link href="/css/login.css" media="all" rel="stylesheet" type="text/css" />
+{{/contentFor}}
+
+<html>
+    <body>
+        <h1>Sign Up</h1>
+        <form id="signup_form" action="/api/users" method="POST">
+            Email:
+            <input type="hidden" id="_csrf" name="_csrf" value="{{csrfToken}}">
+            <br><input id="user_email" name="email" type="text" value="">
+            <br>Password:
+            <br><input id="user_password" name="password" type="password" value="">
+            <br><input id="register_btn" type="submit" value="Sign Up">
+        </form>
+
+        <br><a href='/login'>Log In</a>
+    </body>
+</html>
+
+{{#contentFor 'js'}}
+<script src="/js/main.js"></script>
+<script src="/js/login.js"></script>
+{{/contentFor}}
+
+
+{{> nav}}

@@ -1,0 +1,10 @@
+This is a bootstrapped app for react hot-loading
+
+npm install -g webpack
+npm install -g nodemon
+
+Simultaneously run the hot loader and the app
+npm run hot
+npm run app
+
+go to http://localhost:3000

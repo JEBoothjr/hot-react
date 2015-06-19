@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>Welcome to SECURE!</h1>
+        <p>
+        User:
+        {{#if user}}
+            <p>id: {{user.id}}</p>
+            <p>email: {{user.email}}</p>
+            <p>joined: {{user.joined_at}}</p>
+            <p>(<a href='/logout'>logout</a>)</p>
+        {{else}}
+            SOMETHING WENT WRONG!!! You should have a user to get to this page.
+        {{/if}}
+        </p>
+    </body>
+</html>
+

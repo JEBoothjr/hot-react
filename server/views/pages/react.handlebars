@@ -1,0 +1,28 @@
+{{#contentFor 'css'}}
+    {{#if hot}}
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/css/index.css" />
+    {{else}}
+        <link rel="stylesheet" type="text/css" href="/css/index.css" />
+    {{/if}}
+{{/contentFor}}
+
+<html>
+    <body>
+        <div id="main"></div>
+    </body>
+</html>
+
+{{#contentFor 'js'}}
+    {{#if hot}}
+        <script src="http://localhost:8080/js/vendor.js"></script>
+        <script src="http://localhost:8080/js/index.js"></script>
+    {{else}}
+        <script src="/js/vendor.js"></script>
+        <script src="/js/index.js"></script>
+    {{/if}}
+
+    <script>
+        console.log(document.getElementsByTagName('meta').item(property='csrf_token'));
+        console.log(document.querySelector("meta[name='csrf_token']").getAttribute('content'));
+    </script>
+{{/contentFor}}

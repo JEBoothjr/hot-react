@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>Welcome!</h1>
+        <p>
+        User:
+        {{#if user}}
+            <p>id: {{user.id}}</p>
+            <p>email: {{user.email}}</p>
+            <p>joined: {{user.joined_at}}</p>
+            <p>(<a href='/logout'>logout</a>)</p>
+        {{else}}
+            Not logged in
+        {{/if}}
+        </p>
+    </body>
+</html>
+

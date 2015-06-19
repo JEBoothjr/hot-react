@@ -1,0 +1,75 @@
+{
+    "server": {
+        "domain": "localhost",
+        "static": "./client",
+        "api_root": "/api",
+        "port": "3000",
+        "auth": {
+            "token": {
+                "header": "Authorization",
+                "token_type": "",
+                "jwt": {
+                    "secret": "this will change the world",
+                    "iss": "http://example.com"
+                },
+                "expiration": "2 years"
+            }
+        },
+        "session": {
+            "secret": "this is the best",
+            "cookie": {
+                "name": "pp_session",
+                "expiration": 3600000,
+                "secure": false
+            }
+        }
+    },
+    "email": {
+        "from": "noreply@example.com",
+        "address": "someone@somewhere.com",
+        "password": "asdf",
+        "host": "smtp.gmail.com",
+        "ssl": true
+    },
+    "db": {},
+    "logging": {
+        "winston": {
+            "folder": "./logs",
+            "levels": {
+                "silly": 0,
+                "debug": 1,
+                "verbose": 2,
+                "info": 3,
+                "warn": 4,
+                "error": 5,
+                "test": 6
+            },
+            "transports": [{
+                "name": "Console",
+                "options": {
+                    "level": "info",
+                    "silent": false,
+                    "colorize": false,
+                    "timestamp": false
+                }
+            }, {
+                "name": "DailyRotateFile",
+                "options": {
+                    "level": "debug",
+                    "silent": true,
+                    "colorize": false,
+                    "timestamp": true,
+                    "filename": "./logs/floqast-",
+                    "datePattern": "yyyy-MM-dd.log",
+                    "maxsize": "1048576",
+                    "json": true
+                }
+            }]
+        }
+    },
+    "vendorLibs":{
+        "react": "./node_modules/react/react.js",
+        "react-document-title": "./node_modules/react-document-title/index.js",
+        "react-router": "./node_modules/react-router/lib/index.js"
+    }
+}

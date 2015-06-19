@@ -1,0 +1,11 @@
+{
+    "server": {
+        "session_secret": "SESSION_SECRET"
+    },
+    "db": {},
+    "email": {
+        "address": "SMTP_EMAIL",
+        "password": "SMTP_PASSWORD",
+        "host": "SMTP_HOST"
+    }
+}

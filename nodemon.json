@@ -1,0 +1,17 @@
+{
+    "restartable": "rs",
+    "verbose": true,
+    "ignore": [
+        ".git",
+        ".vagrant",
+        "node_modules/**/node_modules"
+    ],
+    "execMap": {
+        "js": "node"
+    },
+    "watch": [
+        "server",
+        "config"
+    ],
+    "ext": "js json"
+}

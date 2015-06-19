@@ -1,0 +1,33 @@
+{{#contentFor 'css'}}
+ <link href="/css/login.css" media="all" rel="stylesheet" type="text/css" />
+{{/contentFor}}
+
+<html>
+    <body>
+        <h1>Login</h1>
+        <form id="login_form" action="/api/login" method="POST">
+            Email:
+            <input type="hidden" id="_csrf" name="_csrf" value="{{csrfToken}}">
+            <br><input id="user_email" name="email" type="text" value="jeboothjr@gmail.com">
+            <br>Password:
+            <br><input id="user_password" name="password" type="password" value="asdf">
+            <br><input id="register_btn" type="submit" value="Login">
+            <!--<br><input type="checkbox" name="rememberme" value="rememberme" checked>-->
+        </form>
+
+        <br><a href='/signup'>Sign Up</a>
+    </body>
+</html>
+
+{{#contentFor 'js'}}
+<script src="/js/main.js"></script>
+<script src="/js/login.js"></script>
+<script>
+//console.log($('meta[name="_token"]').attr('content'));
+console.log(document.getElementsByTagName('meta').item(property='csrf_token'));
+console.log(document.querySelector("meta[name='csrf_token']").getAttribute('content'));
+</script>
+{{/contentFor}}
+
+
+{{> nav}}
